@@ -23,14 +23,10 @@ a {
   text-decoration: none;
 }
 
-button.button {
+button {
   display: inline-block;
-  height: 40px;
-  border: 2px solid #000;
-  border-radius: 4px;
-  padding: 2px 8px;
+  border: none;
   background-color: transparent;
-  font-size: 16px;
   cursor: pointer;
   font-family: inherit;
 }
