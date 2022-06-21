@@ -18,11 +18,19 @@
   },
   "homepage": "https://github.com/teckim/tv-maze#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
-    "eslint": "^8.18.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "hint": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^28.1.1",
     "style-loader": "^3.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.2"
@@ -32,9 +40,5 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
-  },
-  "dependencies": {
-    "stylelint": "^14.9.1",
-    "stylelint-scss": "^4.2.0"
   }
 }
