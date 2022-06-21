@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
 }
+
 body {
   font-family: "lato", sans-serif;
 }
+
 footer {
   width: 100%;
 }
@@ -16,14 +19,13 @@ footer {
 
 .first-container {
   height: 20vh;
-
 }
 
 .first-container p {
-   font-weight: 400;
-   font-size: 2rem;
-   margin-top: 2rem;
-   margin-left: 1rem;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
 }
 
 .second-container {
