@@ -9,7 +9,7 @@
     "dev": "webpack --watch",
     "test": "jest",
     "lint": "npx hint . && npx stylelint \"**/*.{css,scss}\" && npx eslint .",
-    "deploy:gh-pages": "git subtree push --prefix dist origin gh-pages"  
+    "deploy:gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
+    "file-loader": "^6.2.0",
     "hint": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^28.1.1",

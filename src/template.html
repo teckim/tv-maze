@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%=htmlWebpackPlugin.options.title%></title>
-</head>
-<body>
-    
-        <h3>This is my template </h3>
-        
-</body>
+  </head>
+  <body>
+    <header class="header container">
+      <a class="header__logo" href="/">
+        <img src="assets/images/logo.png" alt="Logo" />
+      </a>
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__list-item">
+            <a class="navbar__list-link link" href="#">Shows (6)</a>
+          </li>
+          <li class="navbar__list-item">
+            <a class="navbar__list-link link" href="#">Drama</a>
+          </li>
+          <li class="navbar__list-item">
+            <a class="navbar__list-link link" href="#">Romance</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>

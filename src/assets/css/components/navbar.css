@@ -1,0 +1,21 @@
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.navbar .navbar__list {
+  height: 100%;
+  display: flex;
+}
+
+.navbar .navbar__list-item {
+  padding: 0 8px;
+}
+
+.navbar .navbar__list-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
