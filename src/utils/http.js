@@ -23,7 +23,15 @@ export default class Http {
         },
         body: JSON.stringify(data),
       })
-        .then((response) => response.json())
+        .then(async (response) => {
+          try {
+            const data = await response.json();
+
+            return data;
+          } catch (err) {
+            return response;
+          }
+        })
         .then((data) => resolve(data))
         .catch((err) => reject(err));
     });
