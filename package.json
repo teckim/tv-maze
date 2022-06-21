@@ -4,7 +4,12 @@
   "description": "This is the capstone project for module two in Microverse (Kanban board).",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "webpack serve --open",
+    "build": "webpack",
+    "dev": "webpack --watch",
+    "test": "jest",
+    "lint": "npx hint . && npx stylelint \"**/*.{css,scss}\" && npx eslint .",
+    "deploy:gh-pages": "git subtree push --prefix dist origin gh-pages"  
   },
   "repository": {
     "type": "git",
