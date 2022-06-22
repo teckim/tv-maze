@@ -16,6 +16,14 @@ const renderpopup = (show) => {
             </div>
             <h2 class"summary"> Summary</h2>
             <div class="pop-dsc">${show.summary}</div>
+            <section class="pop-comments">
+               <h1 class="comment-head">Add Comments</h2>
+                 <form>
+                 <input type="text" class="text" placeholder="Your name"/>
+                 <input type="text" class="text" placeholder="Your insight"/>
+                 <input type="submit" class="submit" value="Submit"/>
+                 </form
+                </section>
         </div>`;
   popupwindow.innerHTML += projectcode;
   document.body.appendChild(popupwindow);
