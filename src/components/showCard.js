@@ -23,15 +23,18 @@ const template = ({
   `;
 
 export default class ShowCard {
+  onCommentClick=() => {}
+
   constructor(show) {
     this.show = show;
 
-    this.render();
+    // this.render();
   }
 
   mounted() {
     const likeBtnEl = document.querySelector(`.button[data-id="${this.show.id}"]`);
-
+    const commentBtnEl = document.querySelector(`.show-card__comment-btn[data-id="${this.show.id}"]`);
+    commentBtnEl.addEventListener('click', this.onCommentClick);
     this.likeBtnEl = likeBtnEl;
     this.likeBtnEl.addEventListener('click', () => this.onLikeClick());
   }

@@ -1,5 +1,6 @@
 import showsApi from '../api/shows.js';
 import ShowCard from './showCard.js';
+import renderpopup from './renderpopup.js';
 
 export default class ShowList {
   constructor() {
@@ -14,11 +15,15 @@ export default class ShowList {
       this.shows = shows.slice(0, 21);
       this.shows.forEach((show) => {
         const showCard = new ShowCard({ ...show, likes: 2 });
+        showCard.onCommentClick = () => {
+          renderpopup(show);
+        };
+
+        showCard.render();
       });
 
       showsCounterEl.innerHTML = this.shows.length;
     } catch (e) {
-      console.error(e);
     }
   }
 }
