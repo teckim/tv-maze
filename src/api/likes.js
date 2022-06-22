@@ -5,7 +5,7 @@ const http = new Http(API_INVOLVE_URL);
 const endPoint = `apps/${APP_ID}/likes`;
 
 export default {
-  get() {
+  getAll() {
     return http.get(endPoint);
   },
 
