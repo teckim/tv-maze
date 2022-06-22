@@ -1,3 +1,5 @@
+import posts from '../api/posts.js';
+
 const renderpopup = (show) => {
   document.querySelector('main').style.filter = 'blur(1rem';
   const popupwindow = document.createElement('div');
@@ -10,19 +12,20 @@ const renderpopup = (show) => {
                 <div class="close"id="close">X</div>
             </div>
             <div class="pop-info">
-                <h1 class="name">${show.name}</h1>
+                <h1 class="pop-name">${show.name}</h1>
                 <div class="lang">Language ${show.language}</div>
                 <div class="run-time">Runtime ${show.runtime} minutes</div> 
             </div>
             <h2 class"summary"> Summary</h2>
             <div class="pop-dsc">${show.summary}</div>
+            <div class="commentarea"></div>
             <section class="pop-comments">
                <h1 class="comment-head">Add Comments</h2>
-                 <form>
-                 <input type="text" class="text" placeholder="Your name"/>
-                 <input type="text" class="text" placeholder="Your insight"/>
+                 <form id ="form">
+                 <input type="text" class="text" id="name" placeholder="Your name"/>
+                 <input type="text" class="text" id="text" placeholder="Your insight"/>
                  <input type="submit" class="submit" value="Submit"/>
-                 </form
+                 </form>
                 </section>
         </div>`;
   popupwindow.innerHTML += projectcode;
@@ -31,6 +34,16 @@ const renderpopup = (show) => {
     document.querySelector('main').style.filter = 'none';
     popupwindow.innerHTML = '';
     document.body.removeChild(popupwindow);
+  });
+  document.getElementById('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const { id } = show;
+    const username = document.getElementById('name').value;
+    const text = document.getElementById('text').value;
+    posts.add(id, username, text).then(() => {
+
+    });
+    form.reset();
   });
 };
 export default renderpopup;
