@@ -13,7 +13,7 @@ const template = ({
           <span class="material-symbols-outlined button__icon">
             favorite
           </span>
-          <span class="button__text">${likes} likes</span>
+          <span class="button__text">${likes}</span>
         </button>
       </div>
     </div>
@@ -45,7 +45,7 @@ export default class ShowCard {
         const likeBtnTxtEl = self.likeBtnEl.querySelector('.button__text');
 
         self.show.likes += 1;
-        likeBtnTxtEl.innerHTML = `${self.show.likes} Likes`;
+        likeBtnTxtEl.innerHTML = `${self.show.likes}`;
       })
       .catch((e) => console.log(e));
   }
