@@ -1,4 +1,4 @@
-const template = ({ image, name }) => `
+const template = ({ image, name, id }) => `
     <div class="show-card__image">
       <img src="${image.medium}" alt="${name}"/>
     </div>
@@ -14,11 +14,13 @@ const template = ({ image, name }) => `
       </div>
     </div>
     <div class="show-card__actions">
-      <button class="show-card__comment-btn button button--primary">comment</button>
+      <button class="show-card__comment-btn button button--primary popbtn" data-id="${id}">comment</button>
     </div>
   `;
 
 export default class ShowCard {
+  onCommentClick=()=>{}
+
   constructor(show) {
     this.show = show;
 

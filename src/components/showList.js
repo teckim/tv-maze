@@ -11,8 +11,11 @@ export default class ShowList {
       const shows = await showsApi.getByPage(1);
 
       this.shows = shows.slice(0, 21);
+      console.log(this.shows)
       this.shows.forEach((show) => {
         const showCard = new ShowCard(show);
+        console.log(showCard)
+        showCard.
       });
     } catch (e) {
       console.error(e);
