@@ -10,6 +10,7 @@ export default class ShowList {
   async fetchShows() {
     try {
       const shows = await showsApi.getByPage(1);
+      const showsCounterEl = document.querySelector('#shows-count');
 
       this.shows = shows.slice(0, 21);
       this.shows.forEach((show) => {
@@ -20,6 +21,8 @@ export default class ShowList {
 
         showCard.render();
       });
+
+      showsCounterEl.innerHTML = this.shows.length;
     } catch (e) {
     }
   }
