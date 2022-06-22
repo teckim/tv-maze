@@ -1,0 +1,23 @@
+.text {
+padding: 1rem;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    border: 2px solid rgb(28, 44, 12);
+    width: 40%;
+    margin-top: 1rem;
+}
+
+.comment-head {
+    margin-top: 1rem;
+    color: rgb(19, 29, 17);
+}
+.submit {
+    width: 20%;
+}
