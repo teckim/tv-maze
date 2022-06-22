@@ -1,6 +1,7 @@
 import showsApi from '../api/shows.js';
 import likesApi from '../api/likes.js';
 import ShowCard from './showCard.js';
+import renderpopup from './renderpopup.js';
 
 export default class ShowList {
   constructor() {
@@ -22,10 +23,14 @@ export default class ShowList {
         });
 
       this.shows.forEach((show) => {
-        const showCard = new ShowCard(show);
+        const showCard = new ShowCard({ ...show, likes: 2 });
+        showCard.onCommentClick = () => {
+          renderpopup(show);
+        };
+
+        showCard.render();
       });
     } catch (e) {
-      console.error(e);
     }
   }
 }
