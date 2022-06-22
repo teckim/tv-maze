@@ -12,7 +12,7 @@ export default class ShowList {
 
       this.shows = shows.slice(0, 21);
       this.shows.forEach((show) => {
-        const showCard = new ShowCard(show);
+        const showCard = new ShowCard({ ...show, likes: 2 });
       });
     } catch (e) {
       console.error(e);
