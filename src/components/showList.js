@@ -32,7 +32,6 @@ export default {
     }
 
     return shows;
-
   },
 
   async fetchLikes() {
