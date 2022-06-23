@@ -1,14 +1,8 @@
-const  length =require('./length.js');
-
-
+const findLengthOnly = require('./rendercomments.js');
 
 describe('Remove and add Task', () => {
-    test('add a task', () => {
-      expect(length(250)).toBe(10);
-    });
-  
-    test('remove todo', () => {
-      expect(store.deleteTodo(1)).toBe(true);
-    });
+  test('add a task', async () => {
+    const r = await findLengthOnly(250);
+    expect(r).toBe(10);
   });
-  
+});
