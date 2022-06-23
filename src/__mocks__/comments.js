@@ -30,4 +30,4 @@ const comment2 = [
   },
 ];
 
-export {comment2,comment1};
+export { comment2, comment1 };
