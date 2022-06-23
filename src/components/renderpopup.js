@@ -35,15 +35,15 @@ const renderpopup = (show) => {
     popupwindow.innerHTML = '';
     document.body.removeChild(popupwindow);
   });
-  document.getElementById('form').addEventListener('submit', (e) => {
+  const form = document.getElementById('form');
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     const { id } = show;
     const username = document.getElementById('name').value;
     const text = document.getElementById('text').value;
     posts.add(id, username, text).then(() => {
-
+      form.reset();
     });
-    form.reset();
   });
 };
 export default renderpopup;
