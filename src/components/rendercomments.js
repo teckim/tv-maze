@@ -1,11 +1,18 @@
-import posts from '../api/posts.js'; 
- const renderComments= async (id) => {
-    await posts.get(id).then((data) => {
-    if (data.length === undefined) { data.length = 0; }
-    const modal = document.querySelector('.commentarea');
-    const comm = document.createElement('div');
-    comm.innerHTML = `<h2 class="t">Comments(${data.length})</h2> `;
-    modal.appendChild(comm);
+import posts from '../api/posts.js';
+
+export const findLengthOnly = (data) => {
+  if (data.length === undefined) { data.length = 0; }
+  const modal = document.querySelector('.commentarea');
+  const comm = document.createElement('div');
+  comm.innerHTML = `<h2 class="t" id="${data.length}">Comments(${data.length})</h2> `;
+  modal.appendChild(comm);
+  const lenght = data.length;
+  return lenght;
+};
+
+const renderComments = async (id) => {
+  await posts.get(id).then((data) => {
+    findLengthOnly(data);
     data.forEach((element) => {
       const modal = document.querySelector('.commentarea');
       const comm = document.createElement('div');
@@ -15,14 +22,7 @@ import posts from '../api/posts.js';
       modal.appendChild(comm);
     });
   });
-    }
+};
 
-    const findLengthOnly = async (id)=> {
-      await posts.get(id).then((data) => {
-        if (data.length === undefined) { data.length = 0; }
-      const Length = data.length;
-      return Length
-    })
-  }
-module.exports= findLengthOnly
-export default renderComments
+// export  = findLengthOnly;
+export default renderComments;
