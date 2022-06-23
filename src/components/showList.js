@@ -2,7 +2,7 @@ import showsApi from '../api/shows.js';
 import likesApi from '../api/likes.js';
 import ShowCard from './showCard.js';
 import renderpopup from './renderpopup.js';
-import posts from '../api/posts.js';
+import renderComments from './rendercomments.js';
 
 export default class ShowList {
   constructor() {
@@ -13,7 +13,6 @@ export default class ShowList {
     try {
       const likes = await likesApi.getAll();
       const shows = await showsApi.getByPage(1);
-      this.shows = shows.slice(0, 21);
       const showsCounterEl = document.querySelector('#shows-count');
 
       this.shows = shows
@@ -27,23 +26,9 @@ export default class ShowList {
 
       this.shows.forEach((show) => {
         const showCard = new ShowCard({ ...show, likes: 2 });
-        showCard.onCommentClick = async () => {
+        showCard.onCommentClick = () => {
           renderpopup(show);
-          await posts.get(show.id).then((data) => {
-            if (data.length === undefined) { data.length = 0; }
-            const modal = document.querySelector('.commentarea');
-            const comm = document.createElement('div');
-            comm.innerHTML = `<h2 class="t">Comments(${data.length})</h2> `;
-            modal.appendChild(comm);
-            data.forEach((element) => {
-              const modal = document.querySelector('.commentarea');
-              const comm = document.createElement('div');
-              comm.innerHTML = ` 
-               <div class="t">${element.creation_date} ${element.username}: ${element.comment}</div>
-               `;
-              modal.appendChild(comm);
-            });
-          });
+          renderComments(show.id);
         };
 
         showCard.render();
