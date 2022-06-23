@@ -1,4 +1,4 @@
-import ShowList from './components/showList.js';
+import showList from './components/showList.js';
 
 // Styles
 import './assets/css/reset.css';
@@ -14,4 +14,7 @@ import './assets/css/components/popup.css';
 // Images
 import './assets/images/logo.png';
 
-const showList = new ShowList();
+showList.init();
+showList.created = () => {
+  showList.render();
+};
