@@ -48,7 +48,7 @@ export default {
 
   render() {
     this.shows.forEach((show) => {
-      const showCard = new ShowCard({ ...show, likes: 2 });
+      const showCard = new ShowCard(show);
       showCard.onCommentClick = () => {
         renderpopup(show);
         renderComments(show.id);
