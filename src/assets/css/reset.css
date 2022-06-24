@@ -12,6 +12,7 @@ body {
   font-family: "Lato", sans-serif;
   letter-spacing: 0.03rem;
   font-size: 16px;
+  padding-top: var(--navbar-height);
 }
 
 ul {
@@ -71,4 +72,9 @@ input:focus {
   font-family: inherit;
   letter-spacing: inherit;
   color: #8a8a8a;
+}
+
+:root {
+  --primary-color: #ff5e00;
+  --navbar-height: 75px;
 }

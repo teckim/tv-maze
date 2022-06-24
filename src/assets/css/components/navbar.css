@@ -2,7 +2,8 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 28px;
+  margin-left: auto;
 }
 
 .navbar .navbar__list {

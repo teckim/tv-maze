@@ -18,7 +18,7 @@
 }
 
 .button.button--primary {
-  background-color: #ff5e00;
+  background-color: var(--primary-color);
   color: white;
 }
 
@@ -31,5 +31,5 @@
 }
 
 .button.button--plain.button--primary {
-  color: #ff5e00;
+  color: var(--primary-color);
 }
