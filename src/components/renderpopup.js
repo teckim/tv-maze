@@ -1,7 +1,7 @@
 import posts from '../api/posts.js';
 
 const renderpopup = (show) => {
-  document.querySelector('main').style.filter = 'blur(1rem';
+  document.querySelector('main').style.filter = 'blur(5px)';
   const popupwindow = document.createElement('div');
   popupwindow.id = ('pop-up');
   popupwindow.classList.add('pop-up');
@@ -18,15 +18,17 @@ const renderpopup = (show) => {
             </div>
             <h2 class"summary"> Summary</h2>
             <div class="pop-dsc">${show.summary}</div>
-            <div class="commentarea"></div>
+            <div class="comment-cont">
             <section class="pop-comments">
                <h1 class="comment-head">Add Comments</h2>
                  <form id ="form">
                  <input type="text" class="text" id="name" placeholder="Your name"/>
-                 <input type="text" class="text" id="text" placeholder="Your insight"/>
+                 <input type="text" class="text2 area" id="text" placeholder="Your insight"/>
                  <input type="submit" class="submit" value="Submit"/>
                  </form>
                 </section>
+                <div class="commentarea"></div>
+            </div>        
         </div>`;
   popupwindow.innerHTML += projectcode;
   document.body.appendChild(popupwindow);
