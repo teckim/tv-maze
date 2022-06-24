@@ -65,7 +65,7 @@ For tracking linters errors locally, you need to follow these steps:
 - GitHub: 
     - [@teckim](https://www.github.com/teckim)
 - Twitter:
-    - [@teckim](https://www.twitter.com/teckim)
+    - [@hakim_bhd](https://www.twitter.com/hakim_bhd)
 
 
 👤 **Rich Adu**
