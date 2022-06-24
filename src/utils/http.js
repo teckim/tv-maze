@@ -1,7 +1,6 @@
 export default class Http {
   constructor(baseUrl) {
     if (typeof baseUrl !== 'string' || !baseUrl) throw new Error(`expected valid url, got: ${baseUrl}`);
-
     this.baseUrl = baseUrl;
   }
 
@@ -26,7 +25,6 @@ export default class Http {
         .then(async (response) => {
           try {
             const data = await response.json();
-
             return data;
           } catch (err) {
             return response;

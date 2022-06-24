@@ -2,6 +2,7 @@ import showsApi from '../api/shows.js';
 import likesApi from '../api/likes.js';
 import ShowCard from './showCard.js';
 import renderpopup from './renderpopup.js';
+import renderComments from './rendercomments.js';
 
 export default {
   async init() {
@@ -50,6 +51,7 @@ export default {
       const showCard = new ShowCard({ ...show, likes: 2 });
       showCard.onCommentClick = () => {
         renderpopup(show);
+        renderComments(show.id);
       };
 
       showCard.render();

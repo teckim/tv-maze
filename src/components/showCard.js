@@ -49,8 +49,7 @@ export default class ShowCard {
 
         self.show.likes += 1;
         likeBtnTxtEl.innerHTML = `${self.show.likes}`;
-      })
-      .catch((e) => console.log(e));
+      });
   }
 
   render() {
