@@ -9,8 +9,11 @@ Users can also comment and like movies and shows.
 ### [Live Demo Link](https://teckim.github.io/tv-maze/)
 
 
+### Deskstop View
+![screenshot](Screenshotdeskstop.png)
 
-![screenshot](comming soon)
+### Mobile View
+![screenshot](Screenshotmobile.png)
 
 ## Built With
 

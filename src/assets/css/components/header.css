@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   background-color: #fff;
-  transition: all linear .2s;
+  transition: all linear 0.2s;
 }
 
 .header .header__logo {
